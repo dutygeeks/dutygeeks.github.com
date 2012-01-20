@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    cri (2.1.0)
+    fssm (0.2.8.1)
+    nanoc (3.2.4)
+      nanoc3 (>= 3.2.4)
+    nanoc3 (3.2.4)
+      cri (~> 2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  fssm
+  nanoc
