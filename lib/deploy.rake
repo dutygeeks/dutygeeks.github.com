@@ -4,7 +4,7 @@ task :deploy do
   require "git"
   repo = Git.open('.')
   repo.branch("master").checkout
-  (Dir["*"] - [site]).each { |f| rm_rf(f) }
+  (Dir["*"] - ["output"]).each { |f| rm_rf(f) }
   Dir["output/*"].each { |f| mv(f, ".") }
   rm_rf("output")
   Dir["**/*"].each { |f| repo.add(f) }
