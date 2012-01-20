@@ -1,6 +1,7 @@
 # https://github.com/chriseppstein/chriseppstein.github.com/blob/source/Rakefile
 desc "deploy website"
 task :deploy do
+  system "nanoc co"
   require "git"
   repo = Git.open('.')
   repo.branch("master").checkout
