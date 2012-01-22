@@ -8,7 +8,7 @@ compile '*' do
   if item.binary?
     case item[:extension]
     when 'png'
-      filter :smusher
+      filter :optipng
     end
   else
     filter :erb
