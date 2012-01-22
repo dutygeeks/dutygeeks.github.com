@@ -4,6 +4,19 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile '/' do
+  filter :erb
+  layout 'default'
+end
+
+compile '/2011-01-22/2' do
+  filter :optipng, :level => 0
+end
+
+compile '/2011-01-22/1' do
+  filter :optipng, :level => 5
+end
+
 compile '*' do
   if item.binary?
     case item[:extension]
@@ -12,7 +25,7 @@ compile '*' do
       filter :optipng, :level => 2
     end
   else
-    filter :erb
+    filter :rdiscount
     layout 'default'
   end
 end

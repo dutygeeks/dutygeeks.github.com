@@ -10,6 +10,11 @@
   <body>
     <div id="main">
       <%= yield %>
+      <% if item.identifier != "/" %>
+      <p>
+        <a href="/">Home</a>
+      </p>
+      <% end %>
     </div>
     <div id="sidebar">
       <h2>Documentation</h2>
@@ -22,6 +27,12 @@
         <li><a href="http://groups.google.com/group/nanoc/">Discussion Group</a></li>
         <li><a href="irc://chat.freenode.net/#nanoc">IRC Channel</a></li>
         <li><a href="http://projects.stoneship.org/trac/nanoc/">Wiki</a></li>
+      </ul>
+      <h2>Archive</h2>
+      <ul>
+        <% sorted_articles.each do |archive| %>
+          <li><a href="<%= archive.path %>"><%= archive[:title] %></a></li>
+        <% end %>
       </ul>
     </div>
   </body>

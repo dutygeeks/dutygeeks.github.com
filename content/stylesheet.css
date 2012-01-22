@@ -46,6 +46,8 @@ a:hover {
   font-size: 15px;
   
   line-height: 20px;
+  
+  text-transform: capitalize;
 }
 
 #main ul, #main ol {
@@ -98,4 +100,9 @@ a:hover {
   font-size: 14px;
 
   line-height: 20px;
+}
+
+#main img {
+  width: 30%;
+  height: 30%;
 }
