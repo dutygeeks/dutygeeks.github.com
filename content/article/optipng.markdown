@@ -7,7 +7,7 @@ kind: article
 Optipng Filter
 ==============
 
-today, i added optipng filter. i guess this is most coolest way to using with nanoc.
+today, i added optipng filter. this is the coolest way i guess.
 
 [gist: 1655310](https://gist.github.com/1655310)
 
@@ -27,12 +27,12 @@ usage is adding `filter :optipng, :level => 2`(between 0 and 7) to your `Rules` 
 
 but i don't add filtering binaries, so you should do that...
 
-  if item.binary?
-    case item[:extension]
-    when 'png'
-      filter :optipng, :level => 2
+    if item.binary?
+      case item[:extension]
+      when 'png'
+        filter :optipng, :level => 2
+      end
     end
-  end
 
 this trick is from [guides](http://nanoc.stoneship.org/docs/6-guides/#using-filters-based-on-file-extensions)
 

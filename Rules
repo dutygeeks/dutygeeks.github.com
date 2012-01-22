@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 compile '/stylesheet/' do
-  # don’t filter or layout
+  filter :rainpress
 end
 
 compile '/' do
