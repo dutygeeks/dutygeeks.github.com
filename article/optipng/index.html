@@ -6,12 +6,13 @@
     <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
     <link rel="icon" href="/favicon.png">
     <meta name="generator" content="nanoc 3.2.4">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Inconsolata' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div id="main">
       <h1>Optipng Filter</h1>
 
-<p>today, i added optipng filter. i guess this is most coolest way to using with nanoc.</p>
+<p>today, i added optipng filter. this is the coolest way i guess.</p>
 
 <p><a href="https://gist.github.com/1655310">gist: 1655310</a></p>
 
@@ -31,15 +32,13 @@ before => 88,152 bytes</p>
 
 <p>but i don't add filtering binaries, so you should do that...</p>
 
-<p>  if item.binary?</p>
-
-<pre><code>case item[:extension]
-when 'png'
-  filter :optipng, :level =&gt; 2
+<pre><code>if item.binary?
+  case item[:extension]
+  when 'png'
+    filter :optipng, :level =&gt; 2
+  end
 end
 </code></pre>
-
-<p>  end</p>
 
 <p>this trick is from <a href="http://nanoc.stoneship.org/docs/6-guides/#using-filters-based-on-file-extensions">guides</a></p>
 
