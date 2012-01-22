@@ -8,7 +8,8 @@ compile '*' do
   if item.binary?
     case item[:extension]
     when 'png'
-      filter :optipng
+      # default value is 2
+      filter :optipng, :level => 2
     end
   else
     filter :erb

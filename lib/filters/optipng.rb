@@ -6,6 +6,7 @@ class Optipng < Nanoc3::Filter
     system(
       'optipng',
       '-quiet',
+      '-o', params[:level].to_s,
       filename,
       '-out', output_filename
     )
