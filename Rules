@@ -9,21 +9,20 @@ compile '/' do
   layout 'default'
 end
 
-# compile '/2011-01-22/2' do
-#   filter :optipng, :level => 0
-# end
-# 
-# compile '/2011-01-22/1' do
-#   filter :optipng, :level => 5
-# end
+compile '/2011-01-22/2' do
+  filter :optipng, :level => 0
+end
+
+compile '/2011-01-22/1' do
+  filter :optipng, :level => 5
+end
 
 compile '*' do
   if item.binary?
     case item[:extension]
     when 'png'
       # default value is 2
-      # filter :optipng, :level => 2
-      filter :smusher
+      filter :optipng, :level => 2
     end
   else
     filter :rdiscount
