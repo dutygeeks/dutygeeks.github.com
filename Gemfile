@@ -7,3 +7,5 @@ gem "git"
 gem "adsf"
 gem "rdiscount"
 gem "rainpress"
+# specify
+gem "smusher"
