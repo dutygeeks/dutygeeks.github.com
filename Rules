@@ -10,11 +10,11 @@ compile '/' do
 end
 
 compile '/2011-01-22/2' do
-  filter :optipng, :level => 0
+  # filter :optipng, :level => 0
 end
 
 compile '/2011-01-22/1' do
-  filter :optipng, :level => 5
+  # filter :optipng, :level => 5
 end
 
 compile '*' do
@@ -22,7 +22,7 @@ compile '*' do
     case item[:extension]
     when 'png'
       # default value is 2
-      filter :optipng, :level => 2
+      # filter :optipng, :level => 2
     end
   else
     filter :rdiscount
