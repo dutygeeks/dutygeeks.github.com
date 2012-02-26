@@ -109,10 +109,15 @@ a:hover {
 
 code, pre {
   font-family: "Inconsolata";
+  text-transform: none;
 }
 
 p code, pre {
   border: solid 1px #ccc;
   padding: 2px;
   background-color: #eee;
+}
+
+#main p:last-child {
+  text-align: right;
 }

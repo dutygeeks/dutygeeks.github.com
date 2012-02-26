@@ -1,5 +1,21 @@
 #!/usr/bin/env ruby
 
+require 'bourbon'
+require 'compass'
+
+compile '/(stylesheet-bourbon|stylesheet-compass)/' do
+  if item.identifier == '/stylesheet-bourbon/'
+    filter :sass
+  elsif item.identifier == '/stylesheet-compass/'
+    filter :sass, Compass.sass_engine_options
+  end
+  filter :rainpress
+end
+# 
+route '/(stylesheet-bourbon|stylesheet-compass)/' do
+  item.identifier.chop + '.css'
+end
+
 compile '/stylesheet/' do
   filter :rainpress
 end
